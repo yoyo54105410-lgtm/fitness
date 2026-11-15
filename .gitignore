@@ -1,0 +1,11 @@
+node_modules/
+*.log
+.env
+.env.*
+!.env.example
+form-backup-*.json
+form-original-data.json
+*.tar.gz
+*.zip
+.DS_Store
+Thumbs.db

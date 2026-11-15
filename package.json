@@ -1,0 +1,11 @@
+{
+  "name": "form-fitness-notes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "以 AGENTS.md 為開發契約的繁體中文健身訓練筆記網站",
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "test": "node --check dist/assets/data.js && node --check dist/assets/core.js && node --check dist/assets/app.js && node tests/core.test.cjs"
+  },
+  "engines": { "node": ">=18" }
+}
