@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ef592d">
+  <meta name="description" content="FORM 健身訓練筆記：探索動作、挑選示範菜單，記下每一次練習。免費、無需帳號，紀錄保存在自己的瀏覽器。">
+  <title>FORM｜健身訓練筆記</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script src="./assets/data.js" defer></script>
+  <script src="./assets/core.js" defer></script>
+  <script src="./assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="#library" aria-label="FORM 健身訓練筆記首頁"><span class="brand-icon" aria-hidden="true">f.</span><span>FORM<small>健身訓練筆記</small></span></a>
+    <nav aria-label="主要導覽"><a href="#library" data-view="library">動作資料庫</a><a href="#plans" data-view="plans">訓練菜單</a><a href="#journal" data-view="journal">我的紀錄</a></nav>
+    <a class="button small header-cta" href="#journal">＋ 記錄訓練</a>
+  </header>
+  <main id="main">
+    <div id="storage-warning" class="notice warning" role="alert" hidden></div>
+    <section class="view" id="view-library" aria-labelledby="library-title">
+      <div class="hero">
+        <div class="hero-copy"><p class="eyebrow"><span class="dot"></span> YOUR PERSONAL TRAINING NOTEBOOK</p><h1 id="library-title">練習有方向，<br>進步有<span class="accent">紀錄。</span></h1><p class="hero-description">認識一個動作，完成一組訓練。<br>把今天的努力，寫成明天的起點。</p><div class="hero-actions"><a href="#plans" class="button">挑一份訓練菜單 <span aria-hidden="true">↗</span></a><a href="#journal" class="text-link">開始寫紀錄 →</a></div><p class="micro">無需帳號 <span>／</span> 資料留在你的瀏覽器</p></div>
+        <div class="hero-art" aria-hidden="true"><span class="art-label">LESS SCROLL.<br>MORE REPS.</span><svg viewBox="0 0 500 360" fill="none"><circle cx="260" cy="178" r="122" stroke="#45483d"/><circle cx="260" cy="178" r="155" stroke="#33372e" stroke-dasharray="3 10"/><g transform="rotate(-32 250 180)"><rect x="95" y="166" width="310" height="28" rx="5" fill="#d4d6c7"/><path d="M215 166V194M229 166V194M243 166V194M257 166V194M271 166V194M285 166V194" stroke="#949887" stroke-width="2"/><rect x="117" y="115" width="36" height="130" rx="10" fill="#ef592d"/><rect x="153" y="95" width="44" height="170" rx="10" fill="#ff7248"/><rect x="303" y="95" width="44" height="170" rx="10" fill="#ef592d"/><rect x="347" y="115" width="36" height="130" rx="10" fill="#ff7248"/><path d="M162 109V247M356 127V232" stroke="#ffb49d" stroke-width="3" stroke-linecap="round"/></g><path d="M59 280h46M82 257v46M393 57h30M408 42v30" stroke="#dedecd" stroke-width="2"/></svg><div class="art-bottom"><span>BUILD YOUR<br>OWN RHYTHM.</span><span class="art-number">01—∞</span></div></div>
+      </div>
+      <div class="intro-strip"><span><b>01</b> 認識動作</span><span><b>02</b> 選擇菜單</span><span><b>03</b> 留下紀錄</span><span class="strip-end">每一次，都算數。 ↗</span></div>
+      <div class="section-heading"><div><p class="eyebrow">THE MOVEMENT LIBRARY</p><h2>你的動作工具箱<span class="count-label">06 MOVEMENTS</span></h2></div><p>先把動作做好，再把數字寫下來。</p></div>
+      <div class="toolbar"><div class="filters" id="category-filters" aria-label="動作部位篩選"></div><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜尋動作、部位或器材" aria-label="搜尋動作"></label></div>
+      <div class="library-meta"><p id="result-count" role="status"></p><button id="favorite-filter" class="text-button" type="button" aria-pressed="false">♡ 只看收藏</button></div>
+      <div class="exercise-grid" id="exercise-grid"></div>
+      <div class="empty-state" id="search-empty" hidden><span aria-hidden="true">⌕</span><h3>還沒找到這個動作</h3><p>試試別的關鍵字，或清除篩選重新探索。</p><button class="button secondary" id="clear-filters">清除篩選</button></div>
+      <aside class="bottom-banner"><div><p class="eyebrow">ONE SMALL STEP, EVERY TIME.</p><h3>不必等準備好，先記下第一組。</h3></div><a href="#journal" class="button secondary">開啟我的紀錄 ↗</a></aside>
+    </section>
+    <section class="view" id="view-plans" aria-labelledby="plans-title" hidden>
+      <div class="page-heading"><p class="eyebrow">MAKE TIME FOR YOURSELF</p><h1 id="plans-title">今天，從哪裡開始？</h1><p>三份示範菜單，幫你看懂動作如何組合。依自己的狀態調整，不必照單全做。</p></div>
+      <div class="plan-grid" id="plan-grid"></div>
+      <div class="notice">練習前先暖身，選擇可控制的負荷；出現疼痛或不適時停止。這些內容用於一般運動教育，不是個人化訓練處方。</div>
+    </section>
+    <section class="view" id="view-journal" aria-labelledby="journal-title" hidden>
+      <div class="page-heading journal-heading"><div><p class="eyebrow">YOUR EFFORT, ON THE RECORD</p><h1 id="journal-title">每一次練習，都留下來。</h1><p>和昨天的自己比，把努力累積成自己的節奏。</p></div><div class="backup-actions"><button class="button secondary small" id="export-data">匯出備份 ↗</button><button class="text-button" id="import-trigger">匯入備份</button><input id="import-file" type="file" accept="application/json,.json" hidden></div></div>
+      <div class="stats"><div><span>累積訓練天數</span><strong id="stat-days">0</strong><small>個有紀錄的日子</small></div><div><span>累積完成組數</span><strong id="stat-sets">0</strong><small>單側動作以每側組數記錄</small></div><div><span>近 7 天訓練</span><strong><span id="stat-week">0</span><em>/ 7</em></strong><small>天數，依本機日期計算</small></div></div>
+      <div id="active-plan" class="active-plan" hidden></div>
+      <div class="journal-layout"><form id="record-form" class="record-form"><p class="eyebrow">ADD A SESSION ENTRY</p><h2>記下這一組努力</h2><p class="form-hint">相同重量與次數可以合併記錄多組。</p><label>訓練日期<input id="record-date" type="date" required min="2000-01-01"></label><label>訓練動作<select id="record-exercise" required></select></label><div class="form-row"><label id="sets-label">組數<input id="record-sets" type="number" min="1" max="100" step="1" value="3" required></label><label><span id="reps-label">每組次數</span><input id="record-reps" type="number" min="1" max="1000" step="1" value="10" required></label></div><label>單支器材重量（kg）<input id="record-weight" type="number" min="0" max="500" step="0.1" value="0" required><small id="weight-hint">徒手動作不需填寫重量。</small></label><label>今天的感受 <span class="optional">選填</span><textarea id="record-notes" rows="3" maxlength="500" placeholder="例如：最後一組仍能穩定完成，下次維持同樣次數。"></textarea></label><button class="button full" type="submit">＋ 儲存這次紀錄</button><p class="form-hint privacy">僅儲存於這個瀏覽器；清除瀏覽資料前，請先匯出備份。</p></form>
+      <div class="record-history"><div class="history-title"><h2>練習足跡</h2><span id="record-count">0 筆紀錄</span></div><div id="record-list"></div><div class="empty-state journal-empty" id="journal-empty"><span class="empty-mark" aria-hidden="true">＋</span><h3>你的第一頁，等你開始。</h3><p>填寫左側表單，記錄第一個動作。<br>不用創紀錄，願意開始就很好。</p></div></div></div>
+    </section>
+  </main>
+  <footer><a href="#library" class="footer-logo">FORM<span>把練習，變成日常。</span></a><p>一般運動教育與個人筆記 · 動作參考 ACE Exercise Library<br>資料儲存在此瀏覽器，不會上傳你的訓練紀錄。</p><a href="./project.html">關於這個專案 ↗</a></footer>
+  <dialog id="exercise-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="關閉動作介紹" type="button">×</button><div id="dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" hidden><span id="toast-text"></span><button id="undo-delete" hidden>復原</button></div>
+  <noscript><div class="notice">請開啟 JavaScript，才能使用搜尋與訓練紀錄功能。</div></noscript>
+</body>
+</html>
